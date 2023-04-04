@@ -1,16 +1,6 @@
-/* * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+/* 
   
-  body {
-    background-color: #fff;
-    color: #000;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-  }
-  .title{
+  .title {
     margin-top: 35px;
     text-align: center;
     text-transform: uppercase;
@@ -18,7 +8,8 @@
     font-weight: bold;
     margin-bottom: 20px;
   }
-  .content{
+  
+  .content {
     padding: 30px 30px;
     width: 100%;
     display: flex;
@@ -33,7 +24,6 @@
     flex-direction: column;
   }
   
-  
   .pump,
   .penis {
     margin-top: 20px;
@@ -41,10 +31,11 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    
+  
     margin-right: 10px;
     width: 100%;
   }
+  
   .penis label,
   .pump label {
     font-size: 20px;
@@ -78,22 +69,190 @@
     font-weight: bold;
     text-transform: uppercase;
   }
-  .visual{
+  
+  .visual {
+    display: block;
     position: absolute;
     bottom: 7%;
     left: 50%;
     transform: translateX(-51%);
     height: 60px;
     width: 42px;
-    
+  
     background: rgba(186, 186, 186, 0.7);
     border: 4px solid #000000;
     border-radius: 100px 100px 12px 12px;
   }
-  .img{
+  
+  .img {
     position: relative;
   }
   
- 
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
   
+    .wrapper {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .penis,
+    .pump {
+      margin-right: 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 24px;
+    }
+  
+    .sub_title {
+      font-size: 20px;
+    }
+  
+    select {
+      width: 100%;
+    }
+  
+    .image img {
+      width: 100%;
+      height: auto;
+    }
+  }
    */
+
+
+   /* //new code */
+
+   .title {
+    margin-top: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .content {
+    padding: 30px 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .wrapper {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .pump,
+  .penis {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  
+    margin-right: 10px;
+    width: 100%;
+  }
+  
+  .penis label,
+  .pump label {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  
+  .image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image img {
+    width: 145px;
+    height: 480px;
+  }
+  
+  select {
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+  }
+  
+  .sub_title {
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .visual {
+    display: block;
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-51%);
+    height: 60px;
+    width: 42px;
+  
+    background: rgba(186, 186, 186, 0.7);
+    border: 4px solid #000000;
+    border-radius: 100px 100px 12px 12px;
+  }
+  
+  .img {
+    position: relative;
+  }
+  
+  /* Media queries for mobile devices */
+  
+  @media only screen and (max-width: 768px) {
+    .content {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+  
+    .wrapper {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .penis,
+    .pump {
+      margin-right: 0;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .title {
+      font-size: 24px;
+    }
+  
+    .sub_title {
+      font-size: 20px;
+    }
+  
+    select {
+      width: 100%;
+    }
+  
+    .image img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
