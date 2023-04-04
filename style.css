@@ -1,4 +1,4 @@
-* {
+/* * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -82,7 +82,7 @@
     position: absolute;
     bottom: 7%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-51%);
     height: 60px;
     width: 42px;
     
@@ -96,4 +96,4 @@
   
  
   
-  
+   */
