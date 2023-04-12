@@ -184,7 +184,7 @@ const wrong = document.querySelector('.status__wrong');
       activeLabel.style.color = "#ccc";
       inactiveLabel.style.color = "#2196F3";
       // Add code to convert inches to cm
-      console.log('checked');
+      
       //circum
       const circumference = Math.PI * penisWidth.value;
       countWidth.innerHTML = `${(circumference.toFixed(2) * 2.54).toFixed(2)} cm`;
@@ -203,10 +203,22 @@ const wrong = document.querySelector('.status__wrong');
       });
       
     } else {
+
+        const tocm = document.querySelectorAll('.tocm');
+      
+      tocm.forEach(item =>{
+        
+        const value = item.textContent.trim();
+        const newValue = (parseFloat(value) / 2.54).toFixed(2);
+        item.textContent = `${newValue} inch`;
+        console.log(item);
+      });
+
+
       activeLabel.style.color = "#2196F3";
       inactiveLabel.style.color = "#ccc";
       // Add code to convert cm to inches
-      console.log('unchecked');
+      
       //circum
       const circumference = Math.PI * penisWidth.value;
       countWidth.innerHTML = `${circumference.toFixed(2)} inches`;

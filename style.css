@@ -224,4 +224,129 @@
 
   /* new media */
   
-  
+  @media screen and (max-width: 769px) {
+    .title{
+      font-size: 24px;
+    }
+    .instruction{
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px;
+    }
+    .instruction_img{
+    width: 100%;
+    margin-bottom: 20px;
+    }
+    .instruction_text{
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    }
+    .content{
+    padding: 20px;
+    }
+    .measure{
+    width: 100%;
+    }
+    .image{
+    width: 21%;
+    }
+    .image img{
+    width: 100%;
+    height: auto;
+    }
+    select{
+    width: 100%;
+    }
+    .range{
+    width: 100%;
+    }
+    .status__correct,
+    .status__wrong{
+    width: 80%;
+    margin-bottom: 20px;
+    }
+    .toggle-switcher{
+    margin-top: 30px;
+    }
+    }
+    
+    @media screen and (max-width: 577px) {
+    .title {
+    font-size: 20px;
+    }
+    .image {
+      width: 20%;
+  }
+    .sub_title{
+    font-size: 20px;
+    }
+    .penis label,
+    .pump label{
+    font-size: 16px;
+    }
+    .visual{
+    height: 100px;
+    width: 32px;
+    }
+    .status_text{
+    font-size: 14px;
+    }
+    }
+    
+    @media screen and (max-width: 415px) {
+    .title{
+    font-size: 28px;
+    }
+    .image {
+      width: 28%;
+  }
+    .sub_title{
+    font-size: 18px;
+    }
+    .penis label,
+    .pump label{
+    font-size: 15px;
+    }
+    .status_text{
+    font-size: 13px;
+    }
+    }
+    
+    @media screen and (max-width: 376px) {
+    .title{
+    font-size: 24px;
+    }
+    .image {
+      width: 31%;
+  }
+    .sub_title{
+    font-size: 16px;
+    }
+    .penis label,
+    .pump label{
+    font-size: 14px;
+    }
+    .status_text{
+    font-size: 12px;
+    }
+    }
+    
+    @media screen and (max-width: 321px) {
+    .title{
+    font-size: 20px;
+    }
+    .image {
+      width: 37%;
+  }
+    .sub_title{
+    font-size: 14px;
+    }
+    .penis label,
+    .pump label{
+    font-size: 13px;
+    }
+    .status_text{
+    font-size: 11px;
+    }
+    }
