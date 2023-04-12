@@ -293,7 +293,12 @@
     font-size: 14px;
     }
     }
-    
+    @media screen and (max-width: 431px) {
+      .image {
+        width: 27%;
+    }
+
+    }
     @media screen and (max-width: 415px) {
     .title{
     font-size: 28px;
