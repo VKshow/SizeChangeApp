@@ -1,5 +1,4 @@
-
-
+document.addEventListener('DOMContentLoaded', function() {
 const pumpLength = document.querySelector('#pump-length');
 const pumpWidth = document.querySelector('#pump-width');
 
@@ -10,58 +9,128 @@ const pumpImage = document.querySelector('#pump-image');
 
 const penisImage = document.querySelector('.visual');
 
+const countLength = document.querySelector('.countLength');
+const countWidth = document.querySelector('.countWidth');
+
+const correct = document.querySelector('.status__correct');
+const wrong = document.querySelector('.status__wrong');
+
+
+
+
+
 
 
 //changing of pump size for input length
 
     pumpLength.oninput = function () {
         if( pumpLength.value == '12' && pumpWidth.value == '1.75'){
-            pumpImage.src = '/img/12inch/12-175.png';
+            pumpImage.src = 'https://cdn.shopify.com/s/files/1/0682/2700/6773/files/12-175.png?v=1681195962';
         } else if(pumpLength.value == '12' && pumpWidth.value == '1.93'){
-            pumpImage.src = "/img/12inch/12-193.png";
+            pumpImage.src = "https://cdn.shopify.com/s/files/1/0682/2700/6773/files/12-193.png?v=1681195961";
         } else if(pumpLength.value == '12' && pumpWidth.value == '2.32'){
-            pumpImage.src = "/img/12inch/12-232.png";
+            pumpImage.src = "https://cdn.shopify.com/s/files/1/0682/2700/6773/files/12-232.png?v=1681195961";
         } else if(pumpLength.value == '12' && pumpWidth.value == '2.5'){
-            pumpImage.src = "/img/12inch/12-25.png";
+            pumpImage.src = "https://cdn.shopify.com/s/files/1/0682/2700/6773/files/12-25.png?v=1681195962";
         } else if(pumpLength.value == '9' && pumpWidth.value == '1.75'){
-            pumpImage.src = "/img/9inch/9-175.png";
+            pumpImage.src = "https://cdn.shopify.com/s/files/1/0682/2700/6773/files/9-175.png?v=1681195923";
+            penisImage.style.height = `${penisLength.value * 37}px`;
         }  else if(pumpLength.value == '9' && pumpWidth.value == '1.93'){
-            pumpImage.src = "/img/9inch/9-193.png";
+            penisImage.style.height = `${penisLength.value * 37}px`;
+            pumpImage.src = "https://cdn.shopify.com/s/files/1/0682/2700/6773/files/12-193.png?v=1681195961";
         }  else if(pumpLength.value == '9' && pumpWidth.value == '2.32'){
-            pumpImage.src = "/img/9inch/9-232.png";
+            penisImage.style.height = `${penisLength.value * 37}px`;
+            pumpImage.src = "https://cdn.shopify.com/s/files/1/0682/2700/6773/files/9-232.png?v=1681195944";
         }  else if(pumpLength.value == '9' && pumpWidth.value == '2.5'){
-            pumpImage.src = "/img/9inch/25.png";
+            penisImage.style.height = `${penisLength.value * 37}px`;
+            pumpImage.src = "https://cdn.shopify.com/s/files/1/0682/2700/6773/files/9-25.png?v=1681195878";
         }
+
+
+        const lengthMeasure = pumpLength.value - penisLength.value;
+        const widthMeasure = pumpWidth.value - penisWidth.value;
+
+        if (lengthMeasure < 2 || (widthMeasure < 0.5 || widthMeasure > 1)){
+            correct.classList.add('hidden');
+            wrong.classList.remove('hidden');
+        } else if(lengthMeasure >= 2 || (widthMeasure >= 0.5 || widthMeasure <= 1)){
+            correct.classList.remove('hidden');
+            wrong.classList.add('hidden');
+        }
+
+        
     };
 
     //changing of pump size for input width
 
     pumpWidth.oninput = function (){
         if( pumpLength.value == '12' && pumpWidth.value == '1.75'){
-            pumpImage.src = 'https://sharedalbums.b-cdn.net/cd02e24c-4bf8-49a4-8388-782428b5d229.png?class=display';
+            pumpImage.src = 'https://cdn.shopify.com/s/files/1/0682/2700/6773/files/12-175.png?v=1681195962';
         } else if(pumpLength.value == '12' && pumpWidth.value == '1.93'){
-            pumpImage.src = "https://sharedalbums.b-cdn.net/6dd48a8e-8e48-40f1-8a47-f8ea6ca1aada.png?class=display";
+            pumpImage.src = "https://cdn.shopify.com/s/files/1/0682/2700/6773/files/12-193.png?v=1681195961";
         } else if(pumpLength.value == '12' && pumpWidth.value == '2.32'){
-            pumpImage.src = "https://sharedalbums.b-cdn.net/c482b253-7f9a-4610-8013-8e58f7438247.png?class=display";
+            pumpImage.src = "https://cdn.shopify.com/s/files/1/0682/2700/6773/files/12-232.png?v=1681195961";
         } else if(pumpLength.value == '12' && pumpWidth.value == '2.5'){
-            pumpImage.src = "https://sharedalbums.b-cdn.net/66a6ad44-4e0d-42d4-8552-8ecaea84a6a3.png?class=display";
+            pumpImage.src = "https://cdn.shopify.com/s/files/1/0682/2700/6773/files/12-25.png?v=1681195962";
         } else if(pumpLength.value == '9' && pumpWidth.value == '1.75'){
-            pumpImage.src = "https://sharedalbums.b-cdn.net/45b41e18-e77d-489f-9175-1862d7ea6ac0.png?class=display";
+            pumpImage.src = "https://cdn.shopify.com/s/files/1/0682/2700/6773/files/9-175.png?v=1681195923";
         }  else if(pumpLength.value == '9' && pumpWidth.value == '1.93'){
-            pumpImage.src = "https://sharedalbums.b-cdn.net/6ab8a089-4069-4e85-bd37-e3e7c540be12.png?class=display";
+            pumpImage.src = "https://cdn.shopify.com/s/files/1/0682/2700/6773/files/9-193.png?v=1681195961";
         }  else if(pumpLength.value == '9' && pumpWidth.value == '2.32'){
-            pumpImage.src = "https://sharedalbums.b-cdn.net/9b54cf73-2594-41c1-b4a4-55be1a0c7c85.png?class=display";
+            pumpImage.src = "https://cdn.shopify.com/s/files/1/0682/2700/6773/files/9-232.png?v=1681195944";
         }  else if(pumpLength.value == '9' && pumpWidth.value == '2.5'){
-            pumpImage.src = "https://sharedalbums.b-cdn.net/2e3b545f-e5b9-46ed-aa8f-f3ac4dbfa1d1.png?class=display";
+            pumpImage.src = "https://cdn.shopify.com/s/files/1/0682/2700/6773/files/9-25.png?v=1681195878";
         }
+
+
+        const lengthMeasure = pumpLength.value - penisLength.value;
+        const widthMeasure = pumpWidth.value - penisWidth.value;
+
+        if (lengthMeasure < 2 || (widthMeasure < 0.5 || widthMeasure > 1)){
+            correct.classList.add('hidden');
+            wrong.classList.remove('hidden');
+        } else if(lengthMeasure >= 2 || (widthMeasure >= 0.5 || widthMeasure <= 1)){
+            correct.classList.remove('hidden');
+            wrong.classList.add('hidden');
+        }
+        
     };
     
 
     //changing penis size by input length
 
     penisLength.oninput = function(){
+        if(pumpLength.value == '9'){
+            penisImage.style.height = `${penisLength.value * 37}px`;
+        }else{
+            penisImage.style.height = `${penisLength.value * 30}px`;
+        }
+        
+        
 
-        penisImage.style.height = `${penisLength.value * 30}px`;
+        // change to cm and back
+        const switcher = document.getElementById("switcher");
+        if (switcher.checked) {
+            
+            countLength.innerHTML = `${(penisLength.value * 2.54).toFixed(2)} cm`;
+        } else{
+            countLength.innerHTML = `${penisLength.value} inch`;
+        }
+
+        //showing the correct or wrong sizes
+        
+        const lengthMeasure = pumpLength.value - penisLength.value;
+        const widthMeasure = pumpWidth.value - penisWidth.value;
+
+        if (lengthMeasure < 2 || (widthMeasure < 0.5 || widthMeasure > 1)){
+            correct.classList.add('hidden');
+            wrong.classList.remove('hidden');
+        } else if(lengthMeasure >= 2 || (widthMeasure >= 0.5 || widthMeasure <= 1)){
+            correct.classList.remove('hidden');
+            wrong.classList.add('hidden');
+        }
+
+        
         
     };
 
@@ -70,4 +139,94 @@ const penisImage = document.querySelector('.visual');
     penisWidth.oninput = function(){
         
         penisImage.style.width = `${penisWidth.value * 42}px`;
+
+        const circumference = Math.PI * penisWidth.value;
+        
+        
+        // change to cm and back
+        const switcher = document.getElementById("switcher");
+        if (switcher.checked) {
+            const circumference = Math.PI * penisWidth.value;
+            countWidth.innerHTML = `${(circumference.toFixed(2) * 2.54).toFixed(2)} cm`;
+        } else{
+            countWidth.innerHTML = `${circumference.toFixed(2)} inches`;
+        }
+        
+
+
+
+        //showing the correct or wrong sizes
+
+
+        const lengthMeasure = pumpLength.value - penisLength.value;
+        const widthMeasure = pumpWidth.value - penisWidth.value;
+        if (lengthMeasure < 2 || (widthMeasure < 0.5 || widthMeasure > 1)){
+            correct.classList.add('hidden');
+            wrong.classList.remove('hidden');
+        } else if(lengthMeasure >= 2 || (widthMeasure >= 0.5 || widthMeasure <= 1)){
+            correct.classList.remove('hidden');
+            wrong.classList.add('hidden');
+        }
     }
+
+    
+//toggle switcher
+
+
+
+  const switcher = document.getElementById("switcher");
+  const activeLabel = document.querySelector(".active-label");
+  const inactiveLabel = document.querySelector(".inactive-label");
+  
+  switcher.addEventListener("change", function() {
+    if (this.checked) {
+        
+      activeLabel.style.color = "#ccc";
+      inactiveLabel.style.color = "#2196F3";
+      // Add code to convert inches to cm
+      console.log('checked');
+      //circum
+      const circumference = Math.PI * penisWidth.value;
+      countWidth.innerHTML = `${(circumference.toFixed(2) * 2.54).toFixed(2)} cm`;
+      //length penis
+      countLength.innerHTML = `${(penisLength.value * 2.54).toFixed(2)} cm`;
+
+        //pump to cm
+      const tocm = document.querySelectorAll('.tocm');
+      
+      tocm.forEach(item =>{
+        
+        const value = item.textContent.trim();
+        const newValue = (parseFloat(value) * 2.54).toFixed(2);
+        item.textContent = `${newValue} cm`;
+        console.log(item);
+      });
+      
+    } else {
+      activeLabel.style.color = "#2196F3";
+      inactiveLabel.style.color = "#ccc";
+      // Add code to convert cm to inches
+      console.log('unchecked');
+      //circum
+      const circumference = Math.PI * penisWidth.value;
+      countWidth.innerHTML = `${circumference.toFixed(2)} inches`;
+      //length penis
+      countLength.innerHTML = `${penisLength.value} inch`;
+    }
+    
+    // Add code to visually show that the toggle switcher has switched
+    const slider = document.querySelector(".slider");
+    slider.classList.toggle("switched");
+  });
+
+
+
+
+
+
+
+    
+    
+  });
+  
+

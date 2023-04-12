@@ -10,75 +10,92 @@
     <title>SizeSelection</title>
 </head>
 <body>
-    <h1 class="title">Choosing the Right Penis Pump Size: How to Ensure a Good Fit</h1>
+    <h1 class="title">Enter your penis measurements and see how each pump fits you</h1>
+	<div class="instruction">
+		<div class="instruction_img">
+			<img src="https://cdn.shopify.com/s/files/1/0528/1932/9203/files/measure-penis-size-correctly_1_1024x1024.png?v=1679368100" alt="instruction">
+		</div>
+		<div class="instruction_text">
+			<p><b>Your proper penis pump length should be 2 - 3 inches longer than your erect penis size.</b> So, if your size is 7 inches when erect, you should use a 9 - 10 inches long cylinder.</p>
+
+			<p><b>For the diameter, you should give at least 1/2 inch of allowance around your shaft.</b>
+				First, measure the size of your girth (when erect). Wrap a measuring tape around the thickest part of your shaft and mark where the tape meets to get the circumference of your penis.
+				Divide that length by 3.142 and the result will be the diameter of your penis.
+				Chose a cylinder that is around 1/2 inch bigger than the diameter of your penis.</p>
+		</div>
+	</div>
+
+<!-- toggle switcher -->
+
+<div class="toggle-switcher">
+	<label class="switch">
+	  <input type="checkbox" id="switcher" class="switcher">
+	  <span class="slider"></span>
+	</label>
+	<div class="toggle-labels">
+	  <span class="active-label">Inches</span>
+	  <span class="inactive-label">CM</span>
+	</div>
+  </div>
+
+
+
+
 	<div class="content">
-        <div class="wrapper">
+        <div class="measure">
             
             <div class="pump"> 
                 <h2 class="sub_title">Pump:</h2>
                 <label for="pump-length">Length:</label>
                 <select id="pump-length">
-                    <option value="12">12 inch</option>
-                    <option value="9">9 inch</option>
+                    <option value="12" class="tocm">12 inch</option>
+                    <option value="9" class="tocm">9 inch</option>
                 </select>
                 
-                <label for="width">Width:</label>
+                <label for="pump-width">diameter:</label>
                 <select id="pump-width">
-                    <option value="1.75">1.75 inch</option>
-                    <option value="1.93">1.93 inch</option>
-                    <option value="2.32">2.32 inch</option>
-                    <option value="2.5">2.5 inch</option>
+                    <option value="1.75" class="tocm">1.75 inch</option>
+                    <option value="1.93" class="tocm">1.93 inch</option>
+                    <option value="2.32" class="tocm">2.32 inch</option>
+                    <option value="2.5" class="tocm">2.5 inch</option>
                 </select>
             </div>
             
             <div class="penis">
                 <h2 class="sub_title">Penis:</h2>
-                <label for="penis-length">Length:</label>
-                <select id="penis-length">
-                    <option value="2">2 inch</option>
-                    <option value="2.5">2.5 inch</option>
-                    <option value="3">3 inch</option>
-                    <option value="3.5">3.5 inch</option>
-                    <option value="4">4 inch</option>
-                    <option value="4.5">4.5 inch</option>
-                    <option value="5">5 inch</option>
-                    <option value="5.5">5.5 inch</option>
-                    <option value="6">6 inch</option>
-                    <option value="6.5">6.5 inch</option>
-                    <option value="7">7 inch</option>
-                    <option value="7.5">7.5 inch</option>
-                    <option value="8">8 inch</option>
-                    <option value="8.5">8.5 inch</option>
-                    <option value="9">9 inch</option>
-                    <option value="9.5">9.5 inch</option>
-                    <option value="10">10 inch</option>
-                    <option value="10.5">10.5 inch</option>
-                    <option value="11">11 inch</option>
-                    <option value="11.5">11.5 inch</option>
-                    <option value="12">12 inch</option>
-                </select>
+                <label for="penis-length">Length:<div class="countLength">5 inch</div></label>
+				<input id="penis-length" class = 'range' type="range" min="2" max="12" step="0.1" value="5">
                 
-                <label for="penis-width">Width:</label>
-                <select id="penis-width">
-                    <option value="1">1 inch</option>
-                    <option value="1.25">1.25 inch</option>
-                    <option value="1.5">1.5 inch</option>
-                    <option value="1.75">1.75 inch</option>
-                    <option value="2">2 inch</option>
-                    <option value="2.25">2.25 inch</option>
-                    <option value="2.5">2.5 inch</option>
-                </select>
+                
+                <label for="penis-width">circumference:<div class="countWidth" >1.2 inch</div></label>
+				<input id="penis-width" class = 'range' type="range" min="1" max="2.5" step="0.01" value="1.2">
+                
             </div>
         </div>
         <div class="image">
             <div class="img">
-                <img id="pump-image" src="https://sharedalbums.b-cdn.net/cd02e24c-4bf8-49a4-8388-782428b5d229.png?class=display" alt="Penis pump image">
+                <img id="pump-image" src="https://cdn.shopify.com/s/files/1/0682/2700/6773/files/12-175.png?v=1681195962" alt="Penis pump image">
                 <div class="visual" style="display:block;"></div>
             </div>
         </div>
+		<div class="size_status">
+			<div class="status__correct">
+				<p class="status_text">correct size</p>
+			</div>
+			<div class="status__wrong hidden">
+				<p class="status_text">wrong size</p>
+			</div>
+		</div>
         
     </div>
 
 <script src="app.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
