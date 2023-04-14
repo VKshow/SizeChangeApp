@@ -11,6 +11,7 @@ const penisImage = document.querySelector('.visual');
 
 const countLength = document.querySelector('.countLength');
 const countWidth = document.querySelector('.countWidth');
+const penisDiam = document. querySelector('#diam_value');
 
 const correct = document.querySelector('.status__correct');
 const wrong = document.querySelector('.status__wrong');
@@ -58,6 +59,16 @@ const wrong = document.querySelector('.status__wrong');
             wrong.classList.add('hidden');
         }
 
+        if(pumpLength.value == '9'){
+            
+            penisLength.max = 9;
+            penisLength.value = 9;
+            
+        }else if(pumpLength.value == '12'){
+            
+            penisLength.max = 12;
+        } 
+
         
     };
 
@@ -101,9 +112,11 @@ const wrong = document.querySelector('.status__wrong');
 
     penisLength.oninput = function(){
         if(pumpLength.value == '9'){
-            penisImage.style.height = `${penisLength.value * 37}px`;
-        }else{
             penisImage.style.height = `${penisLength.value * 30}px`;
+            penisLength.max = 9;
+        }else if(pumpLength.value == '12'){
+            penisImage.style.height = `${penisLength.value * 30}px`;
+            penisLength.max = 12;
         }
         
         
@@ -141,6 +154,8 @@ const wrong = document.querySelector('.status__wrong');
         penisImage.style.width = `${penisWidth.value * 42}px`;
 
         const circumference = Math.PI * penisWidth.value;
+
+        penisDiam.innerHTML = `${penisWidth.value}`;
         
         
         // change to cm and back
@@ -199,7 +214,7 @@ const wrong = document.querySelector('.status__wrong');
         const value = item.textContent.trim();
         const newValue = (parseFloat(value) * 2.54).toFixed(2);
         item.textContent = `${newValue} cm`;
-        console.log(item);
+        
       });
       
     } else {
@@ -211,7 +226,7 @@ const wrong = document.querySelector('.status__wrong');
         const value = item.textContent.trim();
         const newValue = (parseFloat(value) / 2.54).toFixed(2);
         item.textContent = `${newValue} inch`;
-        console.log(item);
+        
       });
 
 

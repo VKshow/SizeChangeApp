@@ -68,11 +68,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
   }
   
   .image img {
-    width: 145px;
-    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    /* width: 145px;
+    height: 480px; */
+  }
+  .img {
+    position: relative;
+    width: 150px;
+  }
+  .visual {
+    display: block;
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-51%);
+    height: 150px;
+    width: 42px;
+  
+    background: rgba(255, 174, 97, 0.78);
+    border: 2px solid #000000;
+    border-radius: 100px 100px 12px 12px;
   }
   
   select {
@@ -100,23 +122,9 @@
     text-transform: uppercase;
   }
   
-  .visual {
-    display: block;
-    position: absolute;
-    bottom: 7%;
-    left: 50%;
-    transform: translateX(-51%);
-    height: 150px;
-    width: 42px;
   
-    background: rgba(255, 174, 97, 0.78);
-    border: 2px solid #000000;
-    border-radius: 100px 100px 12px 12px;
-  }
   
-  .img {
-    position: relative;
-  }
+  
 
   .size_status{
     width: 32%;
@@ -224,134 +232,75 @@
 
   /* new media */
   
-  @media screen and (max-width: 769px) {
-    .title{
-      font-size: 24px;
-    }
-    .instruction{
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 15px;
-    }
-    .instruction_img{
-    width: 100%;
-    margin-bottom: 20px;
-    }
-    .instruction_text{
-    width: 100%;
-    font-size: 16px;
-    text-align: center;
-    }
-    .content{
-    padding: 20px;
-    }
-    .measure{
-    width: 100%;
-    }
-    .image{
-    width: 21%;
-    }
-    .image img{
-    width: 100%;
-    height: auto;
-    }
-    select{
-    width: 100%;
-    }
-    .range{
-    width: 100%;
-    }
-    .status__correct,
-    .status__wrong{
-    width: 80%;
-    margin-bottom: 20px;
-    }
-    .toggle-switcher{
-    margin-top: 30px;
-    }
-    }
-    
-    @media screen and (max-width: 577px) {
-    .title {
-    font-size: 20px;
-    }
-    .image {
-      width: 20%;
-  }
-    .sub_title{
-    font-size: 20px;
-    }
-    .penis label,
-    .pump label{
-    font-size: 16px;
-    }
-    .visual{
-    height: 100px;
-    width: 32px;
-    }
-    .status_text{
-    font-size: 14px;
-    }
-    }
-    @media screen and (max-width: 431px) {
-      .image {
-        width: 27%;
+
+  @media (max-width: 1025px){
+    .status_text {
+      font-size: 11px;
     }
 
-    }
-    @media screen and (max-width: 415px) {
-    .title{
-    font-size: 28px;
-    }
-    .image {
-      width: 28%;
   }
-    .sub_title{
-    font-size: 18px;
-    }
-    .penis label,
-    .pump label{
-    font-size: 15px;
-    }
-    .status_text{
-    font-size: 13px;
-    }
+
+  @media (max-width: 891px){
+    .instruction_img {
+      width: 100%;
+  }
+  .instruction_text {
+    width: 100%;
+    font-size: 19px;
+}
+    .status_text {
+      font-size: 9px;
     }
     
-    @media screen and (max-width: 376px) {
-    .title{
-    font-size: 24px;
-    }
-    .image {
-      width: 31%;
   }
-    .sub_title{
+
+  @media (max-width: 769px){
+    .title{
+      font-size: 26px;
+    }
+    .measure{
+      width: 60%;
+    }
+    .size_status {
+      width: 75%;
+  }
+    .status_text {
+      font-size: 15px;
+  }
+}
+
+  @media (max-width: 623px){
+    
+    .title {
+      font-size: 18px;
+  }
+  .instruction_text {
     font-size: 16px;
+}
+.toggle-switcher {
+  margin-top: 10px;
+}
+.content {
+  padding: 11px 14px
+}
+    .measure{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
-    .penis label,
-    .pump label{
-    font-size: 14px;
-    }
-    .status_text{
-    font-size: 12px;
-    }
-    }
-    
-    @media screen and (max-width: 321px) {
-    .title{
-    font-size: 20px;
-    }
-    .image {
-      width: 37%;
+  .pump, .penis {
+    align-items: center;
   }
-    .sub_title{
-    font-size: 14px;
-    }
-    .penis label,
-    .pump label{
-    font-size: 13px;
-    }
-    .status_text{
-    font-size: 11px;
-    }
-    }
+  .status_text {
+    font-size: 9px;
+}
+.image{
+  width: 100%;
+}
+    
+  }
+
+
+  
