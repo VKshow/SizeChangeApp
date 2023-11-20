@@ -252,6 +252,10 @@ input:checked+.slider:before {
   .status_text {
     font-size: 11px;
   }
+   .slider.slider--mobile {
+    background: transparent;
+  }
+
 
 }
 
@@ -259,6 +263,10 @@ input:checked+.slider:before {
   .instruction_img {
     width: 100%;
   }
+   .slider.slider--mobile {
+    background: transparent;
+  }
+
 
   .instruction_text {
     width: 100%;
@@ -275,6 +283,10 @@ input:checked+.slider:before {
   .title {
     font-size: 26px;
   }
+   .slider.slider--mobile {
+    background: transparent;
+  }
+
 
   .measure {
     width: 60%;
@@ -295,6 +307,10 @@ input:checked+.slider:before {
     margin: 10px 45px;
     font-size: 24px;
   }
+   .slider.slider--mobile {
+    background: transparent;
+  }
+
 
   .instruction_text {
     font-size: 18px;
@@ -334,5 +350,9 @@ input:checked+.slider:before {
   .title {
     margin: 10px 10px;
   }
+   .slider.slider--mobile {
+    background: transparent;
+  }
+
   
 }
